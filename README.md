@@ -17,7 +17,8 @@ This game was built with [React Native](https://reactnative.dev/) and scores are
 
 
 ### Run locally
-If you want to start up this game locally without using the deployed version, clone this repo then run: 
+If you want to start up this game locally without using the deployed version, 
+first, fork or clone this repo then run: 
 
 ```bash
 npm install
