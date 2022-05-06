@@ -1,7 +1,7 @@
 # Space Invaders
 
 ### Deployed Application
-[Download](https://link)
+[Download Space Invaders](https://link)
 
 ## Description
 This is my version of the 1978 classic Space Invaders. You basically shoot aliens coming to destroy the Earth.
