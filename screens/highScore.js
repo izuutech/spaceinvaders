@@ -44,7 +44,7 @@ export default function HighScore(){
           let me="err"
       })
       return ()=>{
-        false
+        username=false
     }
     }, [playerName])
   
@@ -96,7 +96,7 @@ export default function HighScore(){
             let me="err"
         })
         }else{
-          setApiMessage("Please Try Again Later!")
+          setApiMessage("No Scores Yet!")
         }
       })
       .catch((err)=>{
@@ -113,7 +113,15 @@ export default function HighScore(){
       .then((data)=>{
         if(data){
           
-          setAllScores(data.message)
+          
+          //now store global highscore to phone storage
+          asyncData.storeString("globalHigh", `${data.message[0].score}`)
+          .then((valuee)=>{
+            setAllScores(data.message)
+          })
+          .catch((err)=>{
+            let me="err"
+          })
         }else{
          
           setAllScores([])
@@ -123,7 +131,7 @@ export default function HighScore(){
         let msg="err"
       })
       return ()=>{
-        false
+        data=false
       }
     },[modalOpen])
    

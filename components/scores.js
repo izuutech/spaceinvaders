@@ -8,19 +8,40 @@ import * as asyncData from '../shared/data/dataFunctions';
 export default function Scores({playerLive, setPlayerLive, setEnemies, score, setScore, setPlayerPosition}){
     const [playerName, setPlayerName]=useState(null);
     const [playerHighScore, setPlayerHighScore]=useState("0")
-
+    const [globalHigh, setGlobalHigh]=useState("0")
 
 
    
     useEffect(()=>{
         asyncData.getString("playerScore").then((value)=>{
-            setPlayerHighScore(value)
+            if(value){
+                setPlayerHighScore(value)
+            }else{
+                setPlayerHighScore("0")
+            }
+            
           })
           .catch((e)=>{
             setPlayerHighScore("...")
           })
         return ()=>{
-            false
+            value=false;
+        }
+    }, [])
+    useEffect(()=>{
+        asyncData.getString("globalHigh").then((value)=>{
+            if(value){
+                setGlobalHigh(value)
+            }else{
+                setGlobalHigh("0")
+            }
+            
+          })
+          .catch((e)=>{
+            setPlayerHighScore("...")
+          })
+        return ()=>{
+            value=false
         }
     }, [])
 
@@ -35,7 +56,7 @@ export default function Scores({playerLive, setPlayerLive, setEnemies, score, se
             let me="err"
         })
         return ()=>{
-            false
+            username=false
         }
     }, [])
     
@@ -64,7 +85,7 @@ export default function Scores({playerLive, setPlayerLive, setEnemies, score, se
             })
         }
         return ()=>{
-            false
+            value=false
         }
     }, [playerLive])
     
@@ -88,8 +109,8 @@ export default function Scores({playerLive, setPlayerLive, setEnemies, score, se
                             <Text style={styles.theScore}>{playerLive.live}/{playerLive.fullLive}</Text>
                         </View>
                         <View style={styles.eachScoreContainer}>
-                            <Text style={styles.scoreTitle}>Creator</Text>
-                            <Text style={styles.theScore}>Joshua</Text>
+                            <Text style={styles.scoreTitle}>Global HighScore</Text>
+                            <Text style={styles.theScore}>{globalHigh}</Text>
                         </View>
                     </View>
                     <View style={styles.userTitle}>

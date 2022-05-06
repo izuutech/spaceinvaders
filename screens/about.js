@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import {StyleSheet, Text, View, TextInput } from 'react-native';
+import {StyleSheet, Text, View, TextInput, Linking } from 'react-native';
 import Constants from 'expo-constants';
 import Header from '../shared/header';
 
@@ -12,7 +12,18 @@ export default function About(){
             <View style={styles.header}>
             <Header title="About"/>
             </View>
-            <Text style={styles.bodyText}>This game was created by Joshua Izu. It was done to practice gaming with react native. You can visit my website on www.joshuaizu.vercel.app or access all my links via beacons.ai/joshuaizu . If you have issues or bugs that you would like me to fix, kindly contact me via my website and i will try to do that as soon as I have time. Thanks</Text>
+            <Text style={styles.bodyText}>This game was created by Joshua Izu. It was done to practice gaming with react native. You can visit my website on 
+              <Text style={{color: "#cc5500"}}
+                    onPress={()=>Linking.openURL("http://www.joshuaizu.vercel.app")}
+              > www.joshuaizu.vercel.app 
+              </Text> 
+             {" "}or access all my links via 
+            <Text style={{color: "#cc5500"}}
+                  onPress={()=>Linking.openURL("http://beacons.ai/joshuaizu")}
+            > beacons.ai/joshuaizu 
+            </Text>
+            . If you have issues or bugs that you would like me to fix, kindly contact me via my website and i will try to do that as soon as I have time. Thanks
+            </Text>
             <StatusBar style="auto" />
         </View>
     )
