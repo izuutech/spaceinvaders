@@ -1,11 +1,11 @@
 # Space Invaders
 
-### Deployed Appilication
-[Link](https://link)
+### Deployed Application
+[Download Space Invaders](https://link)
 
 ## Description
 This is my version of the 1978 classic Space Invaders. You basically shoot aliens coming to destroy the Earth.
-This game was built with [React Native](https://reactnative.dev/) and scores are updated via a simple api created with nodejs. 
+This game was built with [React Native](https://reactnative.dev/) and scores are updated via a simple api created with nodejs.  
 
 ### Live Preview
 
