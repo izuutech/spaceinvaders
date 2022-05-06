@@ -11,7 +11,8 @@ This game was built with [React Native](https://reactnative.dev/) and scores are
 
 
 
-https://user-images.githubusercontent.com/97368395/167121745-593fd9c1-741f-409f-a514-2677ca9e2683.mp4
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/97368395/167123253-084846ab-510a-4421-a442-1b9714bb677f.gif)
+
 
 
 
