@@ -1,7 +1,7 @@
 node_modules/
 .expo/
 dist/
-eas.json
+./eas.json
 npm-debug.*
 *.jks
 *.p8
