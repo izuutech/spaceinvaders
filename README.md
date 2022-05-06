@@ -1,7 +1,7 @@
 # Space Invaders
 
 ### Deployed Application
-[Download Space Invaders](https://drive.google.com/file/d/1-YQItJGcQKllayUxsHKAUm9HVPHvx-r7/view?usp=sharing)
+[Download Space Invaders](https://drive.google.com/u/2/uc?id=1-YQItJGcQKllayUxsHKAUm9HVPHvx-r7&export=download&confirm=t)
 
 ## Description
 This is my version of the 1978 classic Space Invaders. You basically shoot aliens coming to destroy the Earth.
